@@ -11,11 +11,13 @@ import { PersistGate } from "redux-persist/integration/react";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter basename="/eliftechDelivery">
-        <App />
-      </BrowserRouter>
-    </PersistGate>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter basename="/eliftechDelivery">
+          <App />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 );
 
