@@ -16,15 +16,15 @@ import {
 } from "redux-persist";
 
 const persistConfig = {
-  key: "auth",
+  key: "cart",
   storage,
   blacklist: ["goods"],
 };
 
 export const store = configureStore({
   reducer: {
-    auth: persistReducer(persistConfig, authReducer),
-    cart: cartReducer,
+    cart: persistReducer(persistConfig, cartReducer),
+    auth: authReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

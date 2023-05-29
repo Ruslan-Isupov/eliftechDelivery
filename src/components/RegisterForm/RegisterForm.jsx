@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 // import { register } from 'redux/auth/authOperations';
 import { addOrder } from '../../redux/submitOrder/submitOrderOperations'
+import { clearProducts } from '../../redux/cart/cartSlice';
 import css from './RegisterForm.module.css'
 
 
@@ -21,24 +22,25 @@ export const RegisterForm = () => {
       })
       );
     form.reset()
+    dispatch(clearProducts())
  };
     return (
         <form className ={css.registerForm} onSubmit={handleSubmit}  autoComplete="off" id="form1">
       <label >
         Name
-        <input  className={css.registerInput} type="text" name="name" />
+        <input  className={css.registerInput} type="text" name="name" required />
       </label>
       <label >
         Email
-        <input className={css.registerInput} type="email" name="email" />
+        <input className={css.registerInput} type="email" name="email" required />
       </label>
       <label >
         Phone
-        <input className={css.registerInput} type="number" name="phone" />
+        <input className={css.registerInput} type="number" name="phone" required />
         </label>
         <label >
         Address
-        <input className={css.registerInput} type="text" name="adress" />
+        <input className={css.registerInput} type="text" name="adress" required />
       </label>
   </form>
       
