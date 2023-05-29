@@ -8,10 +8,17 @@ const cartSlice = createSlice({
   initialState: cartInitialState,
   reducers: {
     addGood(state, action) {
-      console.log(action.payload);
+      // console.log(action.payload);
       state.products.push(action.payload);
+    },
+    deleteGood(state, action) {
+      console.log(action.payload);
+      const index = state.products.findIndex(
+        (product) => product.id === action.payload.id
+      );
+      state.products.splice(index, 1);
     },
   },
 });
-export const { addGood } = cartSlice.actions;
+export const { addGood, deleteGood } = cartSlice.actions;
 export const cartReducer = cartSlice.reducer;

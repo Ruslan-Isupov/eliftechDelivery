@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addGood } from "../../redux/cart/cartSlice";
 import { selectAuth } from "../../redux/selectors";
+import food from '../../images/food.jpg'
 
 export const GoodsItem = ({ name, price, id }) => {
  
@@ -16,7 +17,7 @@ export const GoodsItem = ({ name, price, id }) => {
   };
   return (
     <>
-      <img src="" alt="" width="200" height="150" />
+      <img src={food} alt="food" width="200" height="150" />
       <div className={css.descBox}>
         <p className={css.descName}> {name}</p>
         <p className={css.descPrice}>{price}</p>

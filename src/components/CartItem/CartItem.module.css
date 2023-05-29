@@ -1,0 +1,21 @@
+.cartBox {
+    position: relative;
+}
+
+.cartButton {
+    position: absolute;
+    bottom: 10;
+    right: 0;
+}
+
+.cartName {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.cartPrice {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
