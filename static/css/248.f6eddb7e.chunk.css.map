@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/248.f6eddb7e.chunk.css","mappings":"AACA,8BACE,YAAa,CACb,6BAEF","sources":["components/ShopsSection/ShopsSection.module.css"],"sourcesContent":["\r\n.shopsBox{\r\n  display: flex;\r\n  justify-content: space-between;\r\n\r\n}"],"names":[],"sourceRoot":""}
