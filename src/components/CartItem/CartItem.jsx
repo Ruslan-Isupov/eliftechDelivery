@@ -4,8 +4,7 @@ import { useDispatch } from "react-redux";
 import { selectCart } from "../../redux/selectors";
 import { deleteGood } from "../../redux/cart/cartSlice";
 import food from '../../images/food.jpg'
-// import { addGood } from "../../redux/cart/cartSlice";
-// import { selectAuth } from "../../redux/selectors";
+
 export const CartItem = ({ name, price, id,image }) => {
     
       const { products } = useSelector(selectCart);
