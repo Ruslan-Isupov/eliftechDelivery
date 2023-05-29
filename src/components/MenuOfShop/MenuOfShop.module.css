@@ -1,15 +1,17 @@
 .menuList {
+    padding: 20px 0;
     display: flex;
     width:80%;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 15px;
+        gap: 50px;
         overflow-y: scroll;
-        height: 400px;
-        border: 2px solid blue;
+        height: 500px;
+        border: 2px solid rgb(239, 239, 252);
 }
 .menuItem{
-    width: 350px;
+    margin-top:10px;
+    width: 250px;
     height: 300px;
 }

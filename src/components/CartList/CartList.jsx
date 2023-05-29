@@ -6,9 +6,9 @@ import css  from "./CartList.module.css"
 
 export const CartList = () => {
     const { products } = useSelector(selectCart)
-    console.log(products)
+    // console.log(products)
     return (
-        <ul>
+        <ul className={css.cartList}>
              {products ?
         products.map(product => {
           return (
@@ -16,7 +16,6 @@ export const CartList = () => {
               <CartItem
                 name={product.name}
                 price={product.price}
-                // image="https://www.foodiesfeed.com/wp-content/uploads/2021/01/fried-egg-and-guacamole-sandwiches.jpg"
                 id={product.id}
               //   isActive={item.isActive}
               />

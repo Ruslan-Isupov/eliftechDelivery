@@ -1,21 +1,30 @@
 .cartBox {
-    position: relative;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
 }
 
-.cartButton {
+/* .cartButton {
     position: absolute;
     bottom: 10;
     right: 0;
-}
+} */
 
-.cartName {
+/* .cartName {
     position: absolute;
     left: 0;
     top: 0
-}
+} */
 
-.cartPrice {
+/* .cartPrice {
     position: absolute;
     bottom: 0;
     left: 0;
+} */
+.infoCart{
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
 }

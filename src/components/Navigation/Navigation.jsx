@@ -9,7 +9,7 @@ export const Navigation = () => {
                 <NavLink className={css.linkNav} to='/' state={{ from: location }} >Shop</NavLink>
             </li>
             <li>
-                <NavLink className={css.linkNav} to='/cart'>ShoppingCart</NavLink>
+                <NavLink className={css.linkNav} to='/cart'>Shopping Cart</NavLink>
             </li>
         </ul> 
     )

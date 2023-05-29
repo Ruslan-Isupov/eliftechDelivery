@@ -5,7 +5,7 @@ import { MenuOfShop } from "../MenuOfShop/MenuOfShop";
 export const ShopsSection = () => {
   return (
     <>
-      <h1 className={css.mainSectHeading}>ShopsSection</h1>
+      <h1 className={css.mainSectHeading}>Shops Section</h1>
       <div className={css.shopsBox}>
         <ShopsList />
         <MenuOfShop />

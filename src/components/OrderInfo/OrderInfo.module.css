@@ -1,3 +1,7 @@
 .orderBox{
+  margin: 20px 0;
+  gap:20px;
     display: flex;
+    align-items: center;
+    justify-content: flex-end; 
 }

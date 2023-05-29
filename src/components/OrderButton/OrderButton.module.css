@@ -1,3 +1,21 @@
-.orderButton{
-    padding: 10px 15px;
+
+.orderButton {
+    display: block;
+    width: 150px;
+    /* margin: 0 auto; */
+    padding: 10px 20px;
+    background-color: rgba(235, 167, 224, 0.637);
+    color: rgb(77, 77, 77);
+    border-radius: 10%;
+    border: 2px solid rgba(244, 237, 243, 0.637);
+}
+
+.orderButton:hover {
+    background-color: rgba(241, 152, 227, 0.637);
+    color: rgb(255, 255, 255);
+}
+
+.orderButton:focus {
+    background-color: rgba(249, 163, 235, 0.637);
+    color: rgb(255, 255, 255);
 }

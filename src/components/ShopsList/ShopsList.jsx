@@ -1,8 +1,5 @@
 import { useDispatch } from 'react-redux'
 import css from "./ShopsList.module.css"
-// import { useSelector } from 'react-redux'
-// import { selectAuth } from '../../redux/selectors'
-// import { addPage } from '../../redux/tweetCard/tweetCardSlice'
 import {fetchMacMenu,fetchKFZ,fetchMonoPizza,fetchChelentano,fetchDominoz} from "../../redux/auth/authOperations"
 export const ShopsList = () => {
     const dispatch = useDispatch()
