@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/eliftechDelivery/static/css/main.62131e0e.css",
-    "main.js": "/eliftechDelivery/static/js/main.0f8391f6.js",
+    "main.js": "/eliftechDelivery/static/js/main.ac5c9fe8.js",
     "static/css/901.0b81d785.chunk.css": "/eliftechDelivery/static/css/901.0b81d785.chunk.css",
     "static/js/901.99888411.chunk.js": "/eliftechDelivery/static/js/901.99888411.chunk.js",
-    "static/css/728.d8b50a7e.chunk.css": "/eliftechDelivery/static/css/728.d8b50a7e.chunk.css",
-    "static/js/728.6ef4775c.chunk.js": "/eliftechDelivery/static/js/728.6ef4775c.chunk.js",
+    "static/css/728.a2611d39.chunk.css": "/eliftechDelivery/static/css/728.a2611d39.chunk.css",
+    "static/js/728.ffb3c070.chunk.js": "/eliftechDelivery/static/js/728.ffb3c070.chunk.js",
     "static/media/food.jpg": "/eliftechDelivery/static/media/food.0bb126abee98545f1eb6.jpg",
     "index.html": "/eliftechDelivery/index.html",
     "main.62131e0e.css.map": "/eliftechDelivery/static/css/main.62131e0e.css.map",
-    "main.0f8391f6.js.map": "/eliftechDelivery/static/js/main.0f8391f6.js.map",
+    "main.ac5c9fe8.js.map": "/eliftechDelivery/static/js/main.ac5c9fe8.js.map",
     "901.0b81d785.chunk.css.map": "/eliftechDelivery/static/css/901.0b81d785.chunk.css.map",
     "901.99888411.chunk.js.map": "/eliftechDelivery/static/js/901.99888411.chunk.js.map",
-    "728.d8b50a7e.chunk.css.map": "/eliftechDelivery/static/css/728.d8b50a7e.chunk.css.map",
-    "728.6ef4775c.chunk.js.map": "/eliftechDelivery/static/js/728.6ef4775c.chunk.js.map"
+    "728.a2611d39.chunk.css.map": "/eliftechDelivery/static/css/728.a2611d39.chunk.css.map",
+    "728.ffb3c070.chunk.js.map": "/eliftechDelivery/static/js/728.ffb3c070.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.62131e0e.css",
-    "static/js/main.0f8391f6.js"
+    "static/js/main.ac5c9fe8.js"
   ]
 }
