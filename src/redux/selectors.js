@@ -1,3 +1,3 @@
 // export const selectContacts = state => state.contacts;
-export const  = (state) => state.cart;
-selectCartexport const selectAuth = (state) => state.auth;
+export const selectCart = (state) => state.cart;
+export const selectAuth = (state) => state.auth;
