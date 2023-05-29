@@ -18,7 +18,7 @@ export const MenuOfShop = () => {
                 name={good.name}
                 price={good.price}
                 image={good.image}
-                idGood={good.id}
+                id={good.id}
               //   isActive={item.isActive}
               />
             </li>
