@@ -1,5 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchMacMenu } from "./authOperations";
+import {
+  fetchMacMenu,
+  fetchKFZ,
+  fetchMonoPizza,
+  fetchChelentano,
+  fetchDominoz,
+} from "./authOperations";
 
 const initialStateUser = {
   goods: [],
@@ -12,6 +18,10 @@ const handleRejected = (state, action) => {
   state.isLoggedIn = false;
   state.error = action.payload;
 };
+const handleFullfield = (state, action) => {
+  state.isLoggedIn = false;
+  state.error = action.payload;
+};
 
 const authSlice = createSlice({
   name: "auth",
@@ -21,7 +31,23 @@ const authSlice = createSlice({
     // [login.rejected]: handleRejected,
     // [logOut.rejected]: handleRejected,
 
-    [fetchMacMenu.fulfilled](state, action) {
+    [fetchMacMenu.fulfilled]: handleFullfield,
+    [fetchKFZ.fulfilled](state, action) {
+      state.goods = action.payload;
+      // state.price = action.payload.price;
+      state.isLoggedIn = true;
+    },
+    [fetchMonoPizza.fulfilled](state, action) {
+      state.goods = action.payload;
+      // state.price = action.payload.price;
+      state.isLoggedIn = true;
+    },
+    [fetchChelentano.fulfilled](state, action) {
+      state.goods = action.payload;
+      // state.price = action.payload.price;
+      state.isLoggedIn = true;
+    },
+    [fetchDominoz.fulfilled](state, action) {
       state.goods = action.payload;
       // state.price = action.payload.price;
       state.isLoggedIn = true;

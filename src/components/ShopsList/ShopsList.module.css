@@ -1,0 +1,28 @@
+.shopsButton {
+width :150px;
+height: 50px;
+border-radius: 10.310786247253418px;
+border: 2px solid #dfdcca;
+box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+}
+.shopsList {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 15px;
+    height: auto;
+    /* overflow-y: scroll; */
+}
+.divBox{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    width: 30%;
+    height: 100%;
+    border: 2px solid blue;
+    /* height: 500px; */
+}

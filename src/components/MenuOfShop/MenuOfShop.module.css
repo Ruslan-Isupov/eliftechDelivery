@@ -1,0 +1,15 @@
+.menuList {
+    display: flex;
+    width:80%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        overflow-y: scroll;
+        height: 400px;
+        border: 2px solid blue;
+}
+.menuItem{
+    width: 350px;
+    height: 300px;
+}

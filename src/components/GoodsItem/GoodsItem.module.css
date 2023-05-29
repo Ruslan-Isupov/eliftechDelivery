@@ -1,0 +1,18 @@
+.descBox {
+    position: relative;
+}
+.descButton {
+position: absolute;
+bottom: 10;
+right: 0;
+}
+.descName {
+position: absolute;
+left: 0;
+top:0
+}
+.descPrice {
+position: absolute;
+bottom: 0;
+left: 0;
+}
