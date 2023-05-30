@@ -4,37 +4,42 @@ import { useDispatch } from "react-redux";
 import { addGood } from "../../redux/cart/cartSlice";
 import { selectAuth } from "../../redux/selectors";
 import { selectCart } from "../../redux/selectors";
+// import { useMemo } from "react";
 import food from "../../images/food.jpg";
 
 export const GoodsItem = ({ name, price, id }) => {
-  // let quantity = 0
-  const LOCALSTORAGE_KEY = "infoProduct";
-
+ 
+  const LOCALSTORAGE_KEY = id;
+  let quantity = 0;
+  // const LOCALSTORAGE_KEY = "infoProduct2";
+  // const { products } = useSelector(selectCart);
+   
+   
+  
   const { goods } = useSelector(selectAuth);
-  const { products } = useSelector(selectCart);
   const dispatch = useDispatch();
- localStorage.setItem(
-      LOCALSTORAGE_KEY,
-      JSON.stringify({
-        id,
-        quantity: 0,
-      })
-    );
+  
   const addDish = (id) => {
-    const preciseGood = goods.find((item) => item.id === id);
-    const currentQuantity = localStorage.getItem(LOCALSTORAGE_KEY)
-    const parsedQuantity = JSON.parse(currentQuantity)
-    console.log(parsedQuantity)
+
+    
     localStorage.setItem(
       LOCALSTORAGE_KEY,
       JSON.stringify({
         id,
-        quantity: parsedQuantity !== null ? parsedQuantity.quantity + 1 : 0,
+        quantity: quantity+=1,
       })
     );
+    // const currentQuantity = localStorage.getItem(LOCALSTORAGE_KEY)
+    //  let parsedQuantity = JSON.parse(currentQuantity)
+  
+ 
+  
+
+      
     
-    console.log(currentQuantity);
-    // localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify({ id, quantity}))
+
+    const preciseGood = goods.find((item) => item.id === id);
+    
 
     
     dispatch(addGood(preciseGood));

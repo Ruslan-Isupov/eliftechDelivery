@@ -6,17 +6,23 @@ import { deleteGood } from "../../redux/cart/cartSlice";
 import food from '../../images/food.jpg'
 
 export const CartItem = ({ name, price, id, image }) => {
-  const LOCALSTORAGE_KEY = "infoProduct";
-  const quant = localStorage.getItem(LOCALSTORAGE_KEY)
+  // let counter = 0;
+    const LOCALSTORAGE_KEY = id;
+  const getAmount = localStorage.getItem(LOCALSTORAGE_KEY)
+  // console.log(localStorage.length)
     // const currentQuantity = localStorage.getItem(LOCALSTORAGE_KEY)
-  const { quantity } = JSON.parse(quant)
-  console.log(quantity)
-      const { products } = useSelector(selectCart);
+  const { quantity } = JSON.parse(getAmount)
+  const updateQuantity = (quantity) => {
+  quantity += 1
+  }
+
+  
+  const { products } = useSelector(selectCart);
   const dispatch = useDispatch();
   
   const deleteDish = (id) => {
     const deletedGood = products.find((product) => product.id === id);
-    // console.log(preciseGood);
+    
     
     dispatch(deleteGood(deletedGood));
   };
@@ -27,7 +33,8 @@ export const CartItem = ({ name, price, id, image }) => {
           <div className={css.infoCart}>  
             <p className={css.cartName}> {name}</p>
             <p className={css.cartPrice}>{price}</p>
-            <input type="number" step="1" min="1" max="100" id="num_count" name="quantity" value={quantity} pattern="[0-9]*" inputmode="numeric" width="10" height="10"/>
+              {/* <input type="number"  step="1" min="1" max="100" id="num_count" name="quantity" pattern="[0-9]*" inputMode="numeric" width="10" height="10"/> */}
+            <input type="number" onChange={() =>updateQuantity(quantity) } step="1" min="1" max="100" id="num_count" name="quantity" value={quantity} pattern="[0-9]*" inputMode="numeric" width="10" height="10"/>
        </div>
         <button className={css.cartButton} onClick={()=>deleteDish(id)}>
           Delete
