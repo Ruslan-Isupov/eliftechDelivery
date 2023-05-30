@@ -3,17 +3,23 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { selectCart } from "../../redux/selectors";
 import { deleteGood } from "../../redux/cart/cartSlice";
+import { useState } from 'react';
 import food from '../../images/food.jpg'
 
 export const CartItem = ({ name, price, id, image }) => {
-  // let counter = 0;
+
+  // let counter = "";
     const LOCALSTORAGE_KEY = id;
   const getAmount = localStorage.getItem(LOCALSTORAGE_KEY)
-  // console.log(localStorage.length)
+  
+  // console.log(getAmount)
     // const currentQuantity = localStorage.getItem(LOCALSTORAGE_KEY)
   const { quantity } = JSON.parse(getAmount)
-  const updateQuantity = (quantity) => {
-  quantity += 1
+  const [valueQuantity,setvalueQuantity] = useState(quantity)
+  const updateQuantity = (e) => {
+   
+    setvalueQuantity(e.target.value)
+    
   }
 
   
@@ -22,8 +28,6 @@ export const CartItem = ({ name, price, id, image }) => {
   
   const deleteDish = (id) => {
     const deletedGood = products.find((product) => product.id === id);
-    
-    
     dispatch(deleteGood(deletedGood));
   };
     return (
@@ -34,7 +38,7 @@ export const CartItem = ({ name, price, id, image }) => {
             <p className={css.cartName}> {name}</p>
             <p className={css.cartPrice}>{price}</p>
               {/* <input type="number"  step="1" min="1" max="100" id="num_count" name="quantity" pattern="[0-9]*" inputMode="numeric" width="10" height="10"/> */}
-            <input type="number" onChange={() =>updateQuantity(quantity) } step="1" min="1" max="100" id="num_count" name="quantity" value={quantity} pattern="[0-9]*" inputMode="numeric" width="10" height="10"/>
+            <input type="number" onChange={updateQuantity} step="1" min="1" max="100" id="num_count" name="quantity" value={valueQuantity} pattern="[0-9]*" inputMode="numeric" width="10" height="10"/>
        </div>
         <button className={css.cartButton} onClick={()=>deleteDish(id)}>
           Delete
