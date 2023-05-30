@@ -1,14 +1,24 @@
 .cartBox {
     display: flex;
+    flex-direction: column;
     margin-top: 20px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    align-content: center;
+    gap: 20px;
    
 }
-
 
 .infoCart{
     display:flex;
     flex-direction: column;
     gap: 5px;
+    align-items: center;
+}
+.cartImage {
+    display: block;
+    margin: auto 0;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 5px;
 }

@@ -13,15 +13,17 @@ export const CartItem = ({ name, price, id,image }) => {
   const deleteDish = (id) => {
     const deletedGood = products.find((product) => product.id === id);
     // console.log(preciseGood);
+    
     dispatch(deleteGood(deletedGood));
   };
     return (
  <>
-      <img src={food} alt="" width="200" height="150" />
+      <img className={css.cartImage} src={food} alt="" width="200" height="150" />
         <div className={css.cartBox}>
           <div className={css.infoCart}>  
             <p className={css.cartName}> {name}</p>
             <p className={css.cartPrice}>{price}</p>
+            <input type="number" step="1" min="1" max="100" id="num_count" name="quantity"  pattern="[0-9]*" inputmode="numeric" width="15" height="10"/>
        </div>
         <button className={css.cartButton} onClick={()=>deleteDish(id)}>
           Delete

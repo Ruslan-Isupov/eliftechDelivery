@@ -1,19 +1,57 @@
+
+
+.goodImage {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
 .descBox {
-    margin-top: 20px;
-    position: relative;
+    display: flex;
+    padding: 0 8px;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+ 
+
 }
-.descButton {
-position: absolute;
-bottom: 10;
-right: 0;
+
+.infoGood {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+    align-items: center;
 }
-.descName {
-position: absolute;
-left: 1;
-top:0
+ .descName {
+    width:180px;
+   
 }
+/* 
 .descPrice {
-position: absolute;
-bottom: 0;
-left: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}  */
+
+
+.descButton {
+    display: block;
+    padding: 8px 15px;
+    background-color: rgba(235, 167, 224, 0.637);
+    color: rgb(77, 77, 77);
+    border-radius: 10%;
+    border: 2px solid rgba(244, 237, 243, 0.637);
+}
+.descButton:hover {
+    background-color: rgba(241, 152, 227, 0.637);
+    color: rgb(255, 255, 255);
+}
+
+.descButton:focus {
+    background-color: rgba(249, 163, 235, 0.637);
+    color: rgb(255, 255, 255);
 }

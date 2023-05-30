@@ -8,8 +8,14 @@ const cartSlice = createSlice({
   initialState: cartInitialState,
   reducers: {
     addGood(state, action) {
-      // console.log(action.payload);
-      state.products.push(action.payload);
+      const sameId = state.products.find(
+        (product) => product.id === action.payload.id
+      );
+      if (sameId !== undefined) {
+        return;
+      } else {
+        state.products.push(action.payload);
+      }
     },
     deleteGood(state, action) {
       console.log(action.payload);
