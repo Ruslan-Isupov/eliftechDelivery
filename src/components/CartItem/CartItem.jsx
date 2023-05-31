@@ -18,7 +18,7 @@ export const CartItem = ({ name, price, id, image }) => {
   //    const [valueQuantity,setvalueQuantity] = useState(quantity)
   // }
 
-  const { quantity } = JSON.parse(infoDish ? infoDish : 1);
+  const { quantity } = JSON.parse(infoDish ? infoDish : 0);
   
   const [valueQuantity, setvalueQuantity] = useState(quantity);
     const changeQuantity = (e) => {
@@ -50,6 +50,13 @@ export const CartItem = ({ name, price, id, image }) => {
   const { sumPrice } = JSON.parse(infoDish ? infoDish : 1);
   totalPrice += sumPrice
   console.log(totalPrice)
+  const TotalPrice_KEY = "totalPrice";
+  localStorage.setItem(
+      TotalPrice_KEY,
+      JSON.stringify({
+      totalPrice
+      })
+    );
     // const { price } = products.find((product) => product.id === id)
  
 
