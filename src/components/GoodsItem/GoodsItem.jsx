@@ -20,7 +20,7 @@ export const GoodsItem = ({ name, price, id }) => {
       JSON.stringify({
         id,
         quantity: (quantity += 1),
-        sumPrice : quantity*price
+        // sumPrice : quantity*price
       })
     );
 
